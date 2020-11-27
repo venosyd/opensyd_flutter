@@ -1,0 +1,22 @@
+name: "opensyd_flutter"
+author: Sergio Lisan <sels@venosyd.com>
+publish_to: "none"
+
+version: 3.0.0+25
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  clipboard: 
+  flutter:
+    sdk: flutter
+  flutter_cursor:
+  flutter_statusbarcolor: 
+  flutter_webview_plugin:
+  font_awesome_flutter: 
+  opensyd_dart:
+    path: ../opensyd_dart
+  pdf: 
+  shared_preferences: 
+  
