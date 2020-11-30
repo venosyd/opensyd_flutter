@@ -6,7 +6,6 @@
 library opensyd.flutter.widgets.buttons.syiconbutton;
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../extensions/_module_.dart';
 
@@ -62,7 +61,7 @@ class OpenSyIconButton extends StatelessWidget {
                           style: TextStyle(color: foreground),
                         ).Margin(left: 8, right: 12),
                         //
-                        FaIcon(icon, size: size, color: foreground) //
+                        Icon(icon, size: size, color: foreground) //
                             .Margin(right: 8),
                       ],
                     )
@@ -70,7 +69,7 @@ class OpenSyIconButton extends StatelessWidget {
                   : Row(
                       children: [
                         //
-                        FaIcon(icon, size: size, color: foreground) //
+                        Icon(icon, size: size, color: foreground) //
                             .Margin(left: 8, right: 12),
                         //
                         Text(
@@ -81,7 +80,7 @@ class OpenSyIconButton extends StatelessWidget {
                       ],
                     )
               // apenas icone
-              : FaIcon(icon, size: size, color: foreground))
+              : Icon(icon, size: size, color: foreground))
           // apenas texto
           : Text(
               text,
