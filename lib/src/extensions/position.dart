@@ -33,38 +33,28 @@ extension OpenSyPosition on flutter.Widget {
 
   ///
   flutter.Widget Fill({
+    flutter.BuildContext context,
     double left = 0,
     double top = 0,
     double right,
     double bottom,
-  }) =>
-      flutter.Positioned.fill(
+  }) {
+    if (context != null) {
+      final size = flutter.MediaQuery.of(context).size;
+      return flutter.Positioned.fill(
+        child: flutter.SizedBox(
+          child: this,
+          width: size.width,
+          height: size.height,
+        ),
+      );
+    } else
+      return flutter.Positioned.fill(
         left: left,
         top: top,
         right: right,
         bottom: bottom,
         child: this,
       );
-
-  ///
-  flutter.Widget FillScreen(
-    flutter.BuildContext context, {
-    double left = 0,
-    double top = 0,
-    double right,
-    double bottom,
-  }) {
-    final size = flutter.MediaQuery.of(context).size;
-    return flutter.Positioned.fill(
-      left: left,
-      top: top,
-      right: right,
-      bottom: bottom,
-      child: flutter.SizedBox(
-        child: this,
-        width: size.width,
-        height: size.height,
-      ),
-    );
   }
 }
