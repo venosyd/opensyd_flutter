@@ -32,7 +32,22 @@ extension OpenSyPosition on flutter.Widget {
       );
 
   ///
-  flutter.Widget Fill(
+  flutter.Widget Fill({
+    double left = 0,
+    double top = 0,
+    double right,
+    double bottom,
+  }) =>
+      flutter.Positioned.fill(
+        left: left,
+        top: top,
+        right: right,
+        bottom: bottom,
+        child: this,
+      );
+
+  ///
+  flutter.Widget FillScreen(
     flutter.BuildContext context, {
     double left = 0,
     double top = 0,
