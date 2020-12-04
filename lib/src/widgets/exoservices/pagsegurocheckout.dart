@@ -157,11 +157,14 @@ class _PagSeguroCheckoutDialogState extends State<PagSeguroCheckoutDialog> {
             RichText(
               textAlign: TextAlign.center,
               text: const TextSpan(
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 22),
                 children: <TextSpan>[
                   TextSpan(
                     text: 'Checkout ',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                      color: Color(0xFF424242),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   TextSpan(
                     text: 'PagSeguro',
@@ -173,7 +176,9 @@ class _PagSeguroCheckoutDialogState extends State<PagSeguroCheckoutDialog> {
                   ),
                 ],
               ),
-            ).Centered().Height(64),
+            ) //
+                .Centered()
+                .Height(64),
             //
             ListView(children: fields).Expanded(),
           ],
