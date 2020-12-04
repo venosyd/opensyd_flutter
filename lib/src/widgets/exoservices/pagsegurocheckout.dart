@@ -159,7 +159,10 @@ class _PagSeguroCheckoutDialogState extends State<PagSeguroCheckoutDialog> {
               text: const TextSpan(
                 style: TextStyle(fontSize: 18),
                 children: <TextSpan>[
-                  TextSpan(text: 'Checkout '),
+                  TextSpan(
+                    text: 'Checkout ',
+                    style: TextStyle(color: Colors.grey),
+                  ),
                   TextSpan(
                     text: 'PagSeguro',
                     style: TextStyle(
