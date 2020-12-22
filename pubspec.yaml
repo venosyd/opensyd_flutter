@@ -16,7 +16,7 @@ dependencies:
   flutter_webview_plugin:
   font_awesome_flutter: 
   opensyd_dart:
-    git: git@github.com:venosyd/opensyd_dart.git
+    git: https://github.com/venosyd/opensyd_dart
   pdf: 
   shared_preferences: 
   
