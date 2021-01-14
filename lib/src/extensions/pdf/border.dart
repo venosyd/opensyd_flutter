@@ -17,11 +17,7 @@ extension PDFBorders on pw.Widget {
   }) =>
       pw.Container(
         decoration: pw.BoxDecoration(
-          border: pw.BoxBorder(
-            left: true,
-            top: true,
-            right: true,
-            bottom: true,
+          border: pw.Border.all(
             color: color,
             width: width,
           ),
@@ -36,11 +32,7 @@ extension PDFBorders on pw.Widget {
   }) =>
       pw.Container(
         decoration: pw.BoxDecoration(
-          border: pw.BoxBorder(
-            left: false,
-            top: false,
-            right: false,
-            bottom: true,
+          border: pw.Border.all(
             color: color,
             width: width,
           ),
@@ -59,11 +51,7 @@ extension PDFBorders on pw.Widget {
   }) =>
       pw.Container(
         decoration: pw.BoxDecoration(
-          border: pw.BoxBorder(
-            left: false,
-            top: false,
-            right: false,
-            bottom: true,
+          border: pw.Border.all(
             color: color,
             width: width,
           ),
