@@ -8,6 +8,7 @@ library opensyd.flutter.widgets.dialogs.passwdrecover;
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:opensyd_dart/opensyd_dart.dart';
+import 'package:opensyd_flutter/opensyd_flutter.dart';
 
 import '../../extensions/_module_.dart';
 import '../textfields/_module_.dart';
@@ -97,17 +98,11 @@ class _SyPasswdRecoverDialogState extends State<SyPasswdRecoverDialog> {
               controller: _emailcontrol,
             ),
             //
-            FlatButton(
-              color: sending ? const Color(0xFFBDBDBD) : Colors.green,
-              shape: const StadiumBorder(),
-              onPressed: sending ? () {} : _sendmail,
-              child: Text(
-                sending ? 'ENVIANDO...' : 'ENVIAR EMAIL',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                ),
-              ),
+            OpenSyButton(
+              background: sending ? const Color(0xFFBDBDBD) : Colors.green,
+              foreground: sending ? const Color(0xFF424242) : Colors.white,
+              action: sending ? () {} : _sendmail,
+              text: sending ? 'ENVIANDO...' : 'ENVIAR EMAIL',
             ).Width(200),
             //
             const Text(

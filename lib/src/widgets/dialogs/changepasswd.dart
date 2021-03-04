@@ -6,6 +6,7 @@
 library opensyd.flutter.widgets.dialogs.changepasswd;
 
 import 'package:flutter/material.dart';
+import 'package:opensyd_flutter/opensyd_flutter.dart';
 
 import '../../extensions/_module_.dart';
 import '../textfields/_module_.dart';
@@ -83,29 +84,16 @@ class _OpenSyPasswdChangeDialogState extends State<OpenSyPasswdChangeDialog>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 // voltar
-                FlatButton(
-                  shape: const StadiumBorder(),
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text(
-                    'VOLTAR',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
-                    ),
-                  ),
+                OpenSyButton(
+                  action: () => Navigator.pop(context),
+                  text: 'VOLTAR',
                 ).Width(128),
                 // ok
-                FlatButton(
-                  color: saving ? Colors.grey : Colors.blue,
-                  shape: const StadiumBorder(),
-                  onPressed: saving ? () {} : _validate,
-                  child: const Text(
-                    'TROCAR',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                    ),
-                  ),
+                OpenSyButton(
+                  background: saving ? Colors.grey : Colors.blue,
+                  foreground: Colors.white,
+                  action: saving ? () {} : _validate,
+                  text: 'TROCAR',
                 ).Width(128),
               ],
             ).Height(48),
