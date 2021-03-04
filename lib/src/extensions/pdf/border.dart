@@ -1,7 +1,7 @@
 ///
 /// venosyd © 2016-2020. sergio lisan <sels@venosyd.com>
 ///
-library opensyd.flutter.extensions.pdf.border;
+library opensyd.extensions.pdf.border;
 
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -17,10 +17,7 @@ extension PDFBorders on pw.Widget {
   }) =>
       pw.Container(
         decoration: pw.BoxDecoration(
-          border: pw.Border.all(
-            color: color,
-            width: width,
-          ),
+          border: pw.Border.all(color: color, width: width),
         ),
         child: this,
       );
@@ -32,9 +29,11 @@ extension PDFBorders on pw.Widget {
   }) =>
       pw.Container(
         decoration: pw.BoxDecoration(
-          border: pw.Border.all(
-            color: color,
-            width: width,
+          border: pw.Border(
+            bottom: pw.BorderSide(
+              color: color,
+              width: width,
+            ),
           ),
         ),
         child: this,
@@ -42,18 +41,18 @@ extension PDFBorders on pw.Widget {
 
   ///
   pw.Widget Border({
-    bool top = false,
-    bool bottom = false,
-    bool left = false,
-    bool right = false,
-    double width = 1,
-    PdfColor color = PdfColors.black,
+    pw.BorderSide top = pw.BorderSide.none,
+    pw.BorderSide bottom = pw.BorderSide.none,
+    pw.BorderSide left = pw.BorderSide.none,
+    pw.BorderSide right = pw.BorderSide.none,
   }) =>
       pw.Container(
         decoration: pw.BoxDecoration(
-          border: pw.Border.all(
-            color: color,
-            width: width,
+          border: pw.Border(
+            left: left,
+            right: right,
+            top: top,
+            bottom: bottom,
           ),
         ),
         child: this,
