@@ -59,7 +59,7 @@ class OpenSyButton extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           color: foreground,
-          fontFamily: fontfamily ?? 'Roboto',
+          fontFamily: fontfamily,
           fontWeight: bold ? FontWeight.bold : FontWeight.normal,
           fontSize: fontsize,
         ),
