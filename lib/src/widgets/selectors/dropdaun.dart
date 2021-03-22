@@ -14,7 +14,7 @@ import '../../extensions/_module_.dart';
 ///
 ///
 ///
-class DropDaun<T extends SerializableEntity> extends StatelessWidget {
+class DropDaun<T extends OpensydEntity> extends StatelessWidget {
   ///
   const DropDaun({
     @required this.original,

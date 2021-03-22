@@ -3,7 +3,7 @@
 ///
 /// sergio lisan <sels@venosyd.com>
 ///
-library venosyd.providers.database;
+library opensyd.providers.database;
 
 import 'dart:async';
 
